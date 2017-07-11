@@ -45,6 +45,9 @@ namespace AAURedirector
             else if (id.StartsWith("SC-", StringComparison.CurrentCultureIgnoreCase))
             {
                 Response.Redirect("https://srv-webmgmt01.srv.aau.dk/IDtoSystem.aspx?id=" + id);
+            } else if (id.StartsWith("AAU"))
+            {
+                Response.Redirect($"https://srv-webmgmt01.srv.aau.dk/ComputerInfo.aspx?computername={id}");
             }
 
             else
